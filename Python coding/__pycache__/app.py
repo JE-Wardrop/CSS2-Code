@@ -1,31 +1,67 @@
-# tut from: https://medium.com/@darshankhandelwal12/scrape-google-scholar-using-python-3f35a3a6597b
+import time
+import json
+import csv
+from scholarly import scholarly
+import pandas
 import requests
 from bs4 import BeautifulSoup
 
-def getScholarProfiles():
+def getScholarData():
     try:
-        url = "https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=Quantum+Physics"
+        url = "https://scholar.google.com.au/scholar?hl=en&as_sdt=0%2C5&q=accessibility+in+digital+design&btnG=&oq=access"
         headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36"
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.361681261652"
         }
         response = requests.get(url, headers=headers)
-        soup = BeautifulSoup(response.content, 'html.parser')
-        
-        scholar_profiles = []
-        for el in soup.select('.gsc_1usr'):
-            profile = {
-                'name': el.select_one('.gs_ai_name').get_text(),
-                'name_link': 'https://scholar.google.com' + el.select_one('.gs_ai_name a')['href'],
-                'position': el.select_one('.gs_ai_aff').get_text(),
-                'email': el.select_one('.gs_ai_eml').get_text(),
-                'departments': el.select_one('.gs_ai_int').get_text(),
-                'cited_by_count': el.select_one('.gs_ai_cby').get_text().split(' ')[2]
-            }
-            scholar_profiles.append({k: v for k, v in profile.items() if v})
-        
-        print(scholar_profiles)
+        soup = BeautifulSoup(response.text, 'html.parser')
+
+        scholar_results = []
+ 
+        for el in soup.select(".gs_r"):
+            scholar_results.append({
+                "title": el.select(".gs_rt")[0].text,
+                "title_link": el.select(".gs_rt a")[0]["href"],
+                "id": el.select(".gs_rt a")[0]["id"],
+                "displayed_link": el.select(".gs_a")[0].text,
+                "snippet": el.select(".gs_rs")[0].text.replace("\n", ""),
+                "cited_by_count": el.select(".gs_nph+ a")[0].text,
+                "cited_link": "https://scholar.google.com" + el.select(".gs_nph+ a")[0]["href"],
+                "versions_count": el.select("a~ a+ .gs_nph")[0].text,
+                "versions_link": "https://scholar.google.com" + el.select("a~ a+ .gs_nph")[0]["href"] if el.select("a~ a+ .gs_nph")[0].text else "",
+            })
+ 
+        for i in range(len(scholar_results)):
+            scholar_results[i] = {key: value for key, value in scholar_results[i].items() if value != "" and value is not None}
+ 
+        print(scholar_results)
+ 
     except Exception as e:
         print(e)
+ 
+def save_csv(data: list[dict], filepath: str) -> None:
+    if not data:
+        print("No data to save to CSV.")
+        return
 
-getScholarProfiles()
-    
+    fieldnames = ["query", "title", "authors", "year", "journal",
+                  "abstract", "citations", "url"]
+
+    with open(filepath, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(data)
+
+    print(f"CSV save in {filepath}")
+
+getScholarData()
+
+
+
+from scholarly import ProxyGenerator
+pg = ProxyGenerator()
+pg.ScraperAPI("YOUR_FREE_KEY")
+scholarly.use_proxy(pg)
+
+
+if __name__ == "__main__":
+    main()
