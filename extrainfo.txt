@@ -1,0 +1,151 @@
+accessibility UX design
+	No search modifiers
+
+digital media literacy:
+	Papers between 2016 and 2026
+	Subject Area was limited to 
+		Limited to Medicine 1,150
+		Limited to Computer Science 1,125
+		Limited to Engineering366
+	No keyword search
+
+
+digital interfaces:
+	Papers between 2016 and 2026
+	Subject Area was limited to 
+		Limited to Computer Science 5,310
+		Limited to Engineering 5,040
+		Limited to Medicine 3588
+	Keyword
+Limited to Human
+3,769
+
+Limited to User Interfaces
+3,083
+
+Limited to Humans
+3,004
+
+Limited to User-computer Interface
+1,704
+
+Limited to Female
+1,295
+
+Limited to Computer Software
+0
+
+Limited to Adult
+0
+
+Limited to Male
+0
+
+Limited to Human Computer Interaction
+0
+
+Limited to Graphical User Interfaces
+0
+
+Limited to Controlled Study
+0
+
+Limited to Algorithm
+0
+
+Limited to Automation
+0
+
+Limited to Aged
+0
+
+Limited to Middle Aged
+0
+
+Limited to Internet Of Things
+0
+
+Limited to Sensors
+0
+
+Limited to User Experience
+0
+
+Limited to Embedded Systems
+0
+
+Limited to Education
+0
+
+Limited to Information Technology
+
+design for automated systems:
+	Papers between 2016 and 2026
+	Subject Area 
+Limited to Medicine
+5,576
+
+Limited to Engineering
+3,756
+
+Limited to Computer Science
+3,645
+
+
+	Keyword
+Limited to Human
+6,211
+
+Limited to Humans
+5,030
+
+Limited to Adult
+0
+
+Limited to Major Clinical Study
+0
+
+Limited to Software Design
+0
+
+Limited to Automated Pattern Recognition
+0
+
+Limited to Mathematical Models
+0
+
+Limited to Computer Program
+0
+
+Limited to Physiology
+0
+
+Limited to Machine Design
+0
+
+Limited to Simulation
+0
+
+Limited to Risk Assessment
+0
+
+Limited to Information Processing
+0
+
+Limited to Clinical Trial
+0
+
+Limited to Database Systems
+0
+
+Limited to Software Testing
+0
+
+Limited to Aged, 80 And Over
+0
+
+Limited to Automated Design
+0
+
+Limited to User Interfaces
+	
