@@ -1,7 +1,6 @@
 # CSS2-Code
-
 Project Topic: Workflow Automation for Service Request in Prison Healthcare
-Datasets(sources): Google Scholar, Scopus
+Datasets(sources): Google Scholars, Python-based analysis, VoSViewer
 
 Main Streamline: 
   - To offer required data for the foundation
@@ -9,14 +8,19 @@ Main Streamline:
   - Prototype testing and temporary deployment
 
 Software prerequisite: 
-- 
+- React (JavaScript)
+- Vite (building environment)
+- StackBlitz (prototype deployment)
+
+Prototype Introduction: A prototype interface consisting of visualised symptoms and form submission tracking for healthcare's request form targeted for low-literacy inmates. 
 
 Developed by:
   - Alice Ruan
   - Bethany Ly
-  - Erin Wardrop
+  - Erin WarDrop
   - Hlaine Nadi Khant
   - Lara Wolff
   - Trisha Andalene
 
 All Ⓒ Copyrights belong to University of Technology Sydney
+
