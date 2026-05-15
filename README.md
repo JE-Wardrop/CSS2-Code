@@ -1,8 +1,7 @@
 # CSS2-Code
-for all possible programming we may do in this subject
 
 Project Topic: Workflow Automation for Service Request in Prison Healthcare
-Datasets(sources): Google Scholars
+Datasets(sources): Google Scholar, Scopus
 
 Main Streamline: 
   - To offer required data for the foundation
@@ -10,12 +9,12 @@ Main Streamline:
   - Prototype testing and temporary deployment
 
 Software prerequisite: 
-- ......
+- 
 
 Developed by:
   - Alice Ruan
   - Bethany Ly
-  - Erin WarDrop
+  - Erin Wardrop
   - Hlaine Nadi Khant
   - Lara Wolff
   - Trisha Andalene
