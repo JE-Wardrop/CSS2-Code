@@ -1,6 +1,7 @@
 # CSS2-Code
 Project Topic: Workflow Automation for Service Request in Prison Healthcare
-Datasets(sources): Google Scholars, Python-based analysis, VoSViewer
+Datasets(sources): Google Scholar, Scopus
+Tools: VOSViewer, Python
 
 Main Streamline: 
   - To offer required data for the foundation
@@ -17,7 +18,7 @@ Prototype Introduction: A prototype interface consisting of visualised symptoms 
 Developed by:
   - Alice Ruan
   - Bethany Ly
-  - Erin WarDrop
+  - Erin Wardrop
   - Hlaine Nadi Khant
   - Lara Wolff
   - Trisha Andalene
